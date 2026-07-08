@@ -579,7 +579,6 @@ class DashboardClient {
     if (_usesPasswordAuth) {
       return {'Cookie': await _getCookie(), 'Content-Type': 'application/json'};
     }
-    if (_proxied) return {'Content-Type': 'application/json'};
     return {
       'X-Hermes-Session-Token': await _getToken(),
       'Content-Type': 'application/json',
